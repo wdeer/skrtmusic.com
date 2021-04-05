@@ -1,0 +1,79 @@
+  <%
+  $current = current_page.data
+  $page = current_page.metadata[:locals][:page]
+  %>
+  <!doctype html>
+  <html class="no-js" lang="en-US">
+  <head>
+    <% if config[:google_tag] %>
+      <%= component 'google_tag' %>
+    <% end %>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title><%= strip_tags(data.main.SEO_title).html_safe.gsub("\n", " ") %></title>
+
+      <meta name="description" content="<%= strip_tags(data.main.SEO_description).html_safe.gsub("\n", " ") %>">
+      <meta name="keywords" content="<%= data.main.SEO_keywords %>">
+      <meta name="robots" content="index, follow">
+
+      <meta property="og:title" content="<%= strip_tags(data.main.opengraph_title).html_safe.gsub("\n", " ") %>" />
+      <meta property="og:description" content="<%= strip_tags(data.main.opengraph_description).html_safe.gsub("\n", " ") %>" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="<%= config[:url] %>"/>
+      <meta property="og:image" content="<%= config[:url] %>/<%= data.main.opengraph_img %>"/>
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="700" />
+
+      <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+      <link rel="manifest" href="/icons/manifest.json">
+      <meta name="msapplication-TileColor" content="#A4778B">
+      <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+      <meta name="theme-color" content="#A4778B">
+      <meta name="color-scheme" content="dark light">
+      <%= stylesheet_pack_tag "critical" %>
+      <% if data.main.font_embeds %>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+        <% data.main.font_embeds.each do |font| %>
+          <link href="<%= font %>" rel="stylesheet">
+        <% end %>
+      <% end %>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous"></script>
+  </head>
+  <body class="<%= page_classes %>">
+  <div id="top"></div>
+    <!--[if lte IE 9]>
+    <div class="browserupgrade">
+      <p>
+        <strong>PSA:</strong> Yo, your web browser is old as dirt. <br />
+        Please <a href="http://browsehappy.com/">upgrade it</a> to improve your experience <strong>AND SECURITY.</strong> <br />
+        <span>(click to close)</span>
+      </p>
+    </div>
+    <![endif]-->
+
+    <div id="wrapper">
+
+    <%= yield %>
+
+    </div>
+    <%= javascript_pack_tag "build" %>
+    <%= stylesheet_pack_tag "style" %>
+
+    <% if config[:google_analytics] %>
+      <%= component 'google_analytics' %>
+    <% end %>
+  </body>
+  </html>

@@ -1,0 +1,70 @@
+
+# Search Engine Optimization
+SEO_title: "SKRTMUSIC.COM"
+SEO_description: "SKRT IS A BAND THAT MAKES MUSIC"
+SEO_keywords: "" # These keywords MUST be used within content below in order to be effective
+
+# Opengraph
+opengraph_title: "SKRT" # Title for Facebook/Linkedin/Twitter/etc shares
+opengraph_description: "SKRT + LUNG SPLIT EP Available April 10th // Limited Pressing of 300 // Romanus Records" # Description for Facebook/Linkedin/Twitter/etc shares
+opengraph_img: ogimage.png # Image for Facebook/Linkedin/Twitter/etc shares
+
+header_title: SKRT
+
+font_embeds:
+  - https://fonts.googleapis.com/css?family=Londrina+Sketch&display=swap
+
+
+
+#                         _                    _
+#   ___    ___    _ __   | |_    __ _    ___  | |_
+#  / __|  / _ \  | '_ \  | __|  / _` |  / __| | __|
+# | (__  | (_) | | | | | | |_  | (_| | | (__  | |_
+#  \___|  \___/  |_| |_|  \__|  \__,_|  \___|  \__|
+#
+# contact_title: Say Hi!
+# contact_text:
+contact_name: Name
+contact_email: Email
+# contact_reason: Reason for Contacting
+# contact_reasons:
+#   - Legal
+#   - Modeling
+#   - Art
+#   - Other
+contact_message: Message
+form_button: Send Message
+
+
+
+
+#                       _           _
+#                      (_)         | |
+#  ___    ___     ___   _    __ _  | |
+# / __|  / _ \   / __| | |  / _` | | |
+# \__ \ | (_) | | (__  | | | (_| | | |
+# |___/  \___/   \___| |_|  \__,_| |_|
+
+footer_title: ""
+
+facebook_link: https://www.facebook.com/skrtdyt
+
+spotify_link: https://open.spotify.com/artist/2IuyNLh0cXHRB5svJzLP1I
+
+# tiktok_link:
+# tiktok_usertag:
+
+# youtube_link:
+# youtube_usertag:
+
+# instagram_link:
+# instagram_usertag:
+
+# linkedin_link:
+# linkedin_usertag:
+
+
+
+copyright: "SKRT"
+
+gdpr_message: "This site uses cookies to provide necessary site functionality and improve your experience. By clicking, you agree to you are cool with that."

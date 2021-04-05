@@ -1,0 +1,183 @@
+#social {
+  color: lighten($brand-pink, 35%);
+  position: relative;
+  font-weight: 400;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    z-index: 3;
+
+    .social-extra {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .social-medias {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        margin-right: 20px;
+
+        ul {
+          display: flex;
+          align-items: flex-start;
+
+
+          li {
+            flex: 0 0 auto;
+            margin-bottom: 10px;
+
+            a {
+              &:link,
+              &:visited {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                padding: 5px;
+                // margin-right: 20px;
+                color: $white;
+                cursor: pointer;
+
+                .svg {
+                  // margin: 0 15px 0 0;
+                  width: 40px;
+                  height: 40px;
+                  margin: 0;
+
+                  @include breakpoint($iphone6-plus) {
+                    width: 50px;
+                    height: 50px;
+                  } // $iphone6-plus
+
+                  @include breakpoint($tablet) {
+                    width: 70px;
+                    height: 70px;
+                  } // $tablet
+
+                  @include breakpoint($desktop) {
+                    width: 60px;
+                    height: 60px;
+                  } // $tablet
+
+                  svg {
+                    width: 100%;
+                    height: 100%;
+
+                    .circle,
+                    .logo-main,
+                    .logo-secondary {
+                      fill: rgba($white, 1);
+                      transition: 400ms ease;
+                    }
+
+                    .logo-secondary,
+                    .outline {
+                      fill: rgba($white, 0);
+                    }
+
+                  } // svg
+                } // .svg
+              }
+            } // a
+
+            a:hover,
+            a.hovered,
+            a:active {
+              background: none;
+
+              .circle {
+                fill: rgba(white, 0);
+              }
+            } // a:hover
+
+            &.social-facebook {
+              .logo-secondary {
+                fill: none !important;
+              }
+
+              a:hover,
+              a.hovered,
+              a:active {
+                .logo-main {
+                  fill: white !important;
+                 }
+                 .logo-secondary {
+                   transition: 1s ease;
+                   fill: #3b5998 !important;
+                   display: block !important;
+                 }
+              }
+            }
+
+            &.social-spotify {
+              display: flex;
+              position: relative;
+
+              .iframe-wrapper {
+                position: absolute;
+                top: 0;
+                left: 100%;
+                overflow: hidden;
+                padding-top: .3em;
+                margin: 0;
+
+                iframe {
+                  position: relative;
+                  opacity: 0;
+                  left: -100%;
+                  transition:
+                    left 900ms ease 200ms,
+                    opacity 1200ms;
+                }
+              }
+
+              &:hover,
+              &.hovered {
+                .iframe-wrapper iframe {
+                  left: 0;
+                  opacity: 1;
+                }
+              }
+
+              a:hover,
+              a.hovered,
+              a:active {
+                .logo-main {
+                  fill: rgba(white, 0) !important;
+                 }
+                 .logo-secondary {
+                   transition: 1s ease;
+                   fill: #1db954 !important;
+                   display: block !important;
+                 }
+              }
+            }
+          } // li
+        } // ul
+
+        h4 {
+          color: white;
+          margin: 0;
+          font-weight: 300;
+          letter-spacing: .1em;
+          text-transform: uppercase;
+          font-size: 1.3em;
+        } // h4
+      } // divs
+    } // .footer-extra
+  } // .container
+} // #social

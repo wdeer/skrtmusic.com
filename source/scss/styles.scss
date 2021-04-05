@@ -1,0 +1,26 @@
+// @import '~checka11y-css';
+
+@import "~breakpoint-sass/stylesheets/breakpoint";
+@import "~normalize-scss/sass/normalize";
+// @import "~animate.css";
+// @import "~swiper/swiper.scss";
+// @import "~swiper/components/navigation/navigation.scss";
+// @import "~swiper/components/pagination/pagination.scss";
+
+// @import "~magnific-popup/src/css/main.scss";
+// @import "~select2/src/scss/core.scss";
+
+
+@import 'global/_variables';
+@import 'global/_mixins';
+@import 'global/_global';
+// @import 'web/_header';
+@import 'global/_helpers';
+// @import 'web/_nav';
+@import 'web/_main';
+// @import 'web/_contact';
+@import 'web/_social';
+@import 'web/_footer';
+// @import 'web/_animations';
+@import 'web/_plugins';
+@import 'global/_darkmode';

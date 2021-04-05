@@ -1,0 +1,67 @@
+@keyframes trippyHeaderImg {
+  0%, 100% {
+    transform: translate3d(5px, 5px, 0);
+  }
+  50% {
+    transform: translate3d(-5px, -5px, 0) scale3d(1.05, 1, 1);
+  }
+}
+
+@keyframes locationSpazz {
+  0%, 20%, 24%, 25%, 27%, 52%, 66%, 80%, 100% {
+    text-shadow:
+      black 0.03em 0.03em 0px,
+      black 0.07em 0.07em 0px;
+  }
+  15%, 23%, 26%, 55%, 63%, 65%, 78%, 50% {
+    text-shadow:
+      black 0.03em 0.03em 0px,
+      #222 0.07em 0.07em 0px;
+  }
+}
+
+
+@keyframes hoverHeader {
+  0%, 100% {
+    text-shadow:
+      $color1 0.03em 0.03em 0px,
+      rgba($color2, .5) -0.03em -0.03em 0px,
+      $color1 0.03em 0.03em 0px,
+      $color1 -0.03em -0.03em 0px,
+      $color1 0.07em 0.07em 0px,
+      $color1 -0.07em -0.07em 0px,
+      $color1 0.1em 0.1em 0px,
+      $color1 -0.1em -0.1em 0px
+      ;
+  }
+  50% {
+    text-shadow:
+      $color1 -0.03em -0.03em 0px,
+      rgba($color2, .5) 0.03em 0.03em 0px,
+      $color1 0.03em 0.03em 0px,
+      $color1 -0.03em -0.03em 0px,
+      $color1 0.07em 0.07em 0px,
+      $color1 -0.07em -0.07em 0px,
+      $color1 0.1em 0.1em 0px,
+      $color1 -0.1em -0.1em 0px
+      ;
+  }
+}
+
+@keyframes squiggly {
+  0% {
+    filter: url("#squiggly-0");
+  }
+  25% {
+    filter: url("#squiggly-1");
+  }
+  50% {
+    filter: url("#squiggly-2");
+  }
+  75% {
+    filter: url("#squiggly-3");
+  }
+  100% {
+    filter: url("#squiggly-4");
+  }
+}

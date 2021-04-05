@@ -1,0 +1,28 @@
+---
+page_title: SKRT
+---
+<% if development? %>
+<div class="wrapper">
+  <%= component "header" %>
+  <%= component "main" %>
+  <%# component "contact" %>
+  <%# component "social" %>
+</div>
+<%= component "footer" %>
+<%# component "nav" %>
+
+<% end %>
+
+
+
+
+<% if production? %>
+<div class="wrapper">
+  <%= component "header" %>
+  <%= component "main" %>
+  <%# component "contact" %>
+  <%# component "social" %>
+</div>
+<%= component "footer" %>
+<%# component "nav" %>
+<% end %>

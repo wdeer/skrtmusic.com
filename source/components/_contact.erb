@@ -1,0 +1,74 @@
+<section id="contact">
+    <div class="container">
+      <div class="form-wrapper">
+        <header>
+          <h3>
+            <% if current_page.path === '404.html' %>
+              <span class="subtitle">Page not found, but you could still...</span>
+            <% end %>
+            <%= data.main.contact_title %>
+          </h3>
+          <div class="validation-message">
+            <strong class="validation-message-header"></strong>
+            <ul class="validation-messages"></ul>
+          </div>
+        </header>
+        <form action="https://formspree.io/f/mwkwydgo" method="POST">
+          <!-- CONFIG -->
+          <input type="hidden" name="_next" value="//olivia.work/thanks/index.html" />
+          <input type="hidden" name="_format" value="plain" />
+          <input type="hidden" name="_subject" id="_subject" value="message from olvia.work" />
+          <input type="text" name="_gotcha" style="display:none" />
+          <!-- /CONFIG -->
+
+          <div class="contact-wrap">
+
+              <div class="group group-1">
+                  <div class="contact-name input-group">
+                    <input name="name" id="name" type="text" class="input" required />
+                    <label for="name" class="label"><%= data.main.contact_name %><span>*</span></label>
+                  </div>
+
+                  <div class="contact-email input-group">
+                    <input name="_replyto" id="email" type="email" class="input" required />
+                    <label for="email" class="label"><%= data.main.contact_email %><span>*</span></label>
+                  </div>
+
+                  <% if data.main.contact_reason %>
+                  <div class="contact-reason input-group select-group">
+                    <% if data.main.contact_reasons %>
+                    <select name="reason" id="reason" class="select-reason input" required>
+                      <option></option>
+                      <% data.main.contact_reasons.each do |reason| %>
+                      <option value="<%= reason %>"><%= reason %></option>
+                      <% end %>
+                    </select>
+                    <% else %>
+                      <input name="reason" id="reason" type="reason" class="input" required />
+                    <% end %>
+                    <label for="reason" class="label"><%= data.main.contact_reason %><span>*</span></label>
+                  </div>
+                  <% end %>
+              </div>
+
+              <div class="group group-2">
+                  <div class="textarea input-group">
+                      <textarea id="message" name="message" class="input" required></textarea>
+                      <label for="message" class="label"><%= data.main.contact_message %><span>*</span></label>
+                  </div>
+              </div>
+
+          </div>
+          <div class="form-buttons">
+            <button id="sendMessage" class="button button-b" type="submit">
+              <%= data.main.form_button %>
+            </button>
+          </div>
+        </form>
+      </div>  <%# form-wrapper %>
+    </div>  <%# container %>
+
+    <div class="bg-img">
+      <img src="" data-src="" alt="" class="lazyload" />
+    </div>
+</section>

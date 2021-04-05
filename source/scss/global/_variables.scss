@@ -1,0 +1,44 @@
+// Breakpoints
+$iphone6:                       375px;
+$iphone6-plus:                  414px;
+$ipad:                          768px;
+$ipad-pro:                      1024px;
+$desktop:                       1200px;
+$desktop-lg:                    1600px;
+$retina:                        min-resolution 1.5dppx;
+$touch:                         (pointer coarse);
+
+$tablet:                        $ipad;
+
+$phone-only:                    max-width $iphone6-plus;
+
+$font-main: 'Oswald', sans-serif;
+// Colors
+$color1: #2B303A;
+$color2: #e74c3c;
+$color3: white;
+
+$nav-base-bg: #34495e;
+
+$brand-red: #AF4319;
+$brand-tan: #C9A690;
+$brand-darkgray: #2B303A;
+$brand-white: #FFEECF;
+$brand-yellow: #EECF6D;
+$brand-gold: #D5AC4E;
+$brand-pink: #A4778B;
+$brand-blue: #03254E;
+
+$white: #dff9fb;
+
+
+
+$facebook: #3b5998;
+$instagram: #C13584;
+$linkedin: #0077B5;
+$twitter: #38A1F3;
+
+$svg-wave-bg: 2B303A;
+
+$swiper-button-color: #666666;
+$swiper-button-svg: 666666;

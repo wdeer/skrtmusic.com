@@ -1,0 +1,17 @@
+---
+page_title: 404 Not Found
+---
+<% if development? %>
+<%= component "contact" %>
+<%= component "footer" %>
+<%= component "nav" %>
+<% end %>
+
+
+
+
+<% if production? %>
+<%= component "contact" %>
+<%= component "footer" %>
+<%= component "nav" %>
+<% end %>

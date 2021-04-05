@@ -1,0 +1,199 @@
+#main {
+  position: relative;
+  background: rgba(black, .7);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: flex-end;
+  margin: 0;
+
+  @include breakpoint($tablet) {
+    margin-left: -5%;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+    width: 50vw;
+    height: 100vh;
+
+  } // $tablet
+
+  .bg-img img {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    opacity: .6;
+    width: 100%;
+    bottom: 0;
+
+    @include breakpoint($tablet) {
+      bottom: -100px;
+    } // $tablet
+  }
+}
+
+.main-wrapper {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 100px;
+
+  @include breakpoint($tablet) {
+    padding-bottom: 0;
+  } // $tablet
+}
+
+
+
+
+h2 {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 25px;
+  font-size: 2.5em;
+
+  @include breakpoint($iphone6-plus) {
+    margin-top: 50px;
+    font-size: 3em;
+  } // $iphone6-plus
+
+  @include breakpoint($tablet) {
+    font-size: 5em;
+  } // $tablet
+
+  span {
+    display: block;
+  }
+}
+
+.section-wrapper {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+} // .section-wrapper
+
+@keyframes pulse-record {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(.95); }
+}
+
+.record-release {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 300px;
+  margin: -5% auto 0;
+  color: $white !important;
+
+  h3 {
+    text-align: right;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 1.2em;
+    color: inherit;
+
+    @include breakpoint($tablet) {
+      font-size: 1.4em;
+    } // $tablet
+
+    @include breakpoint($desktop-lg) {
+      font-size: 1.6em;
+    } // $desktop-lg
+
+    a {
+      display: block;
+      font-size: .925em;
+
+      &:link,
+      &:visited {
+        background: $white;
+        color: $color1;
+      }
+
+      &:hover,
+      &.hovered,
+      &:active {
+        background: $color1;
+        color: $white;
+      }
+    }
+  }
+
+  p {
+    display: block;
+    width: 100%;
+    font-size: 1em;
+    text-align: center;
+    text-shadow:
+      0 0 .25em black,
+      0 0 .5em black,
+      0 0 1em black,
+      0 0 2em black
+    ;
+
+    @include breakpoint($tablet) {
+      font-size: 1.2em;
+    } // $tablet
+
+    @include breakpoint($desktop-lg) {
+      font-size: 1.3em;
+      text-align: right;
+    } // $desktop-lg
+
+    span {
+      display: block;
+    }
+  }
+
+  figure {
+    position: relative;
+    margin: 0;
+    max-width: 50%;
+    transition: transform 2500ms ease, 600ms ease;
+    animation: pulse-record 2500ms ease infinite forwards;
+
+    @include breakpoint($tablet) {
+      max-width: 75%;
+    } // $tablet
+
+    @include breakpoint($desktop-lg) {
+      max-width: 100%;
+    } // $desktop
+
+    img {
+      position: relative;
+      max-width: 100%;
+      z-index: 2;
+      box-shadow:
+        0 0 15px rgba(black, .8),
+        0 0 15px rgba(black, .8);
+    } // img
+
+    &::before {
+      content: "";
+      width: 98%;
+      height: 98%;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      transform: translateX(-80%) rotate(-35deg);
+      background-image: url("/img/lg/record-solo.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      z-index: 1;
+      transition: transform 600ms ease-in;
+    }
+
+    &:hover,
+    &.hovered {
+      animation: none;
+      transform: scale(1);
+
+      &::before {
+        transform: translateX(-30%) rotate(0);
+        transition: transform 900ms ease-out 200ms;
+      }
+    }
+  } // figure
+} // .record-release

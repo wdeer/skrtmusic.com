@@ -1,0 +1,50 @@
+<section id="masthead" class="hoverable">
+
+  <header>
+    <% if current_page.path === 'thanks.html' %>
+    <h1>Thank You</h1>
+    <% else %>
+      <% if data.main.header_title %>
+        <h1>
+          <span class="skrt"><%= data.main.header_title %></span>
+        </h1>
+      <% end %>
+    <% end %>
+  </header>
+
+  <div class="block">
+    <% for i in 0..100 do %>
+      <span><%= data.main.header_title %></span>
+    <% end %>
+  </div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="squiggly-0">
+        <feturbulence id="turbulence" basefrequency="0.02" numoctaves="3" result="noise" seed="0"/>
+        <fedisplacementmap id="displacement" in="SourceGraphic" in2="noise" scale="6"/>
+      </filter>
+      <filter id="squiggly-1">
+        <feturbulence id="turbulence" basefrequency="0.02" numoctaves="3" result="noise" seed="1"/>
+        <fedisplacementmap in="SourceGraphic" in2="noise" scale="8"/>
+      </filter>
+      <filter id="squiggly-2">
+        <feturbulence id="turbulence" basefrequency="0.02" numoctaves="3" result="noise" seed="2"/>
+        <fedisplacementmap in="SourceGraphic" in2="noise" scale="6"/>
+      </filter>
+      <filter id="squiggly-3">
+        <feturbulence id="turbulence" basefrequency="0.02" numoctaves="3" result="noise" seed="3"/>
+        <fedisplacementmap in="SourceGraphic" in2="noise" scale="8"/>
+      </filter>
+      <filter id="squiggly-4">
+        <feturbulence id="turbulence" basefrequency="0.02" numoctaves="3" result="noise" seed="4"/>
+        <fedisplacementmap in="SourceGraphic" in2="noise" scale="6"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="bg-img">
+    <div><img class="img1 lazyload" src="/img/sm/background_header.png" data-src="/img/lg/background_header.png" alt="Image of SKRT Performing" /></div>
+    <div><img class="img2 lazyload" src="/img/sm/background_header.png" data-src="/img/lg/background_header.png" alt="Image of SKRT Performing" /></div>
+  </div>
+</section>
